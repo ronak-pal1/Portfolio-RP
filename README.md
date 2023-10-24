@@ -1,8 +1,22 @@
-# React + Vite
+<h1 align="center"> Portfolio </h1>
+<br><br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+<img src="public/logo192.png" alt="My image"/>
+</p>
 
-Currently, two official plugins are available:
+<br><br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2 align="center">Ronak Paul - Aspiring Software Engineer</h2>
+<br>
+
+<p align="center">Welcome to my portfolio website! I'm Ronak Paul, a passionate 19-year-old software engineering student currently pursuing my Bachelor of Technology degree in Computer Science. I'm excited to share my journey, skills, and projects with you.</p>
+<br><br><br>
+
+<p align="center">
+<a href="https://ronak-pal1.github.io/Portfolio-RP/">Visit my portfolio</a>
+</p>
+
+<br><br>
+
+<p align="center" > Thank you for visiting my portfolio website. Feel free to explore my projects and get in touch if you'd like to connect, collaborate, or discuss exciting software engineering opportunities. Let's innovate and code the future together!</p>

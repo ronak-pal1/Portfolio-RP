@@ -37,8 +37,8 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="/Portfolio-RP" element={<HomePage />} />
+          <Route path="/Portfolio-RP/projects" element={<ProjectsPage />} />
         </Routes>
 
         <Footer />

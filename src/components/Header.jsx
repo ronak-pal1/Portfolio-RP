@@ -20,7 +20,7 @@ const Header = ({ setDark, currentMode }) => {
       </div>
 
       <div className="text-xs sm:text-base space-x-4 font-poppins font-medium dark:text-white items-center">
-        <Link to="/" className=" hover:border-b border-blue-700">
+        <Link to="/Portfolio-RP" className=" hover:border-b border-blue-700">
           Home
         </Link>
         <a href="#projects" className=" hover:border-b border-blue-700">
