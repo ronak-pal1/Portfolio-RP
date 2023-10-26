@@ -6,7 +6,7 @@ const Footer = () => {
           <p className="lg:text-xl text-base text-black font-poppins mb-4 font-thin border-b border-blue-600 w-fit pb-1 dark:text-white">
             Socials
           </p>
-          <div className="flex flex-col sm:items-baseline items-center space-y-1 text-blue-500 lg:text-base text-xs">
+          <div className="flex flex-col sm:items-baseline items-center space-y-1 text-blue-500 hover:[&>a]:text-blue-400 lg:text-base text-xs">
             <a href="https://twitter.com/ronak_pal1" target="_blank">
               Twitter
             </a>
@@ -33,7 +33,7 @@ const Footer = () => {
             Youtube Playlists
           </p>
 
-          <div className="flex flex-col sm:items-baseline items-center space-y-1 text-gray-600 lg:text-base text-xs">
+          <div className="flex flex-col sm:items-baseline items-center space-y-1 text-gray-600 hover:[&>a]:text-gray-500 lg:text-base text-xs">
             <a
               href="https://www.youtube.com/playlist?list=PLMl6OFJSWfIhBWRWlLO01hSXHqtsbEWzN"
               target="_blank"
@@ -60,7 +60,7 @@ const Footer = () => {
             Blogs
           </p>
 
-          <div className="flex flex-col sm:items-baseline items-center space-y-1 text-gray-600 lg:text-base text-xs">
+          <div className="flex flex-col sm:items-baseline items-center space-y-1 text-gray-600 hover:[&>a]:text-gray-500 lg:text-base text-xs">
             <a
               href="https://codago.hashnode.dev/mastering-git-commands"
               target="_blank"
