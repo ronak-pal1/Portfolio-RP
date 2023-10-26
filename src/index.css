@@ -37,6 +37,17 @@
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgb(67, 67, 67);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
