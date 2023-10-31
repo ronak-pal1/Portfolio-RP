@@ -8,8 +8,12 @@ import gmailCover from "../assets/projectCovers/gmail.jpg";
 import linkedCover from "../assets/projectCovers/linkedin.jpg";
 import slackCover from "../assets/projectCovers/slack.jpg";
 import netflixCover from "../assets/projectCovers/netflix.jpg";
+import expenseTrackerAppCover from "../assets/projectCovers/owlspender.jpg";
+import codeCasingCover from "../assets/projectCovers/CodeCasing.jpg";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+
+const windowWIDTH = window.innerWidth;
 
 const ProjectSection = () => {
   const navigate = useNavigate();
@@ -17,12 +21,16 @@ const ProjectSection = () => {
   let scrollPos = 0;
 
   const moveRight = () => {
-    scrollPos += 384;
+    if (scrollPos + 800 >= windowWIDTH) return;
+
+    scrollPos += 800;
     projectContainer.current.scrollTo({ left: scrollPos, behavior: "smooth" });
   };
 
   const moveLeft = () => {
-    scrollPos -= 384;
+    if (scrollPos <= 0) return;
+
+    scrollPos -= 800;
     projectContainer.current.scrollTo({ left: scrollPos, behavior: "smooth" });
   };
 
@@ -37,13 +45,13 @@ const ProjectSection = () => {
 
       <div className="relative">
         <div
-          className="absolute left-10 top-1/2 z-20 rounded-full bg-black text-white dark:bg-white dark:text-black hidden md:block cursor-pointer"
+          className="absolute left-4 top-1/2 z-20 rounded-full bg-black text-white dark:bg-white dark:text-black hidden md:block cursor-pointer"
           onClick={moveLeft}
         >
           <ArrowLeftRounded fontSize="large" />
         </div>
         <div
-          className="absolute right-10 top-1/2 z-20 rounded-full bg-black text-white dark:bg-white dark:text-black hidden md:block cursor-pointer"
+          className="absolute right-4 top-1/2 z-20 rounded-full bg-black text-white dark:bg-white dark:text-black hidden md:block cursor-pointer"
           onClick={moveRight}
         >
           <ArrowRightRounded fontSize="large" />
@@ -52,6 +60,20 @@ const ProjectSection = () => {
           className="px-5 py-7 flex overflow-x-scroll no-scrollbar"
           ref={projectContainer}
         >
+          <ProjectCard
+            imgUrl={expenseTrackerAppCover}
+            title="Expense Tracker App"
+            desp="This is a expense tracker app for students and working professional to keep track of their expenses. It uses labels and prizes to keep track expenses."
+            sourceLink="https://github.com/ronak-pal1/Expense-Tracker-App"
+            techStacks={["reactjs", "firebase", "tailwindcss"]}
+          />
+          <ProjectCard
+            imgUrl={codeCasingCover}
+            title="Code snippet generator"
+            desp="CodeCasing is a code to image generator app. You just have to give the code and your will get an customizable image in return."
+            sourceLink="https://ronak-pal1.github.io/CodeCasing/"
+            techStacks={["html5", "css3", "javascript"]}
+          />
           <ProjectCard
             imgUrl={gmailCover}
             title="Gmail Clone"
@@ -83,7 +105,7 @@ const ProjectSection = () => {
             imgUrl={netflixCover}
             title="Netflix Clone"
             desp="Netflix clone is a replica of the real Netflix. Here you can login via gmail and pass, see the latest movies fetched from TMDB and stripe integration"
-            sourceLink=""
+            sourceLink="https://github.com/ronak-pal1/Netflix-Web-Clone"
             techStacks={[
               "reactjs",
               "redux",
