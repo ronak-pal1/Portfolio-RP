@@ -5,6 +5,8 @@ import { ArrowUpward } from "@mui/icons-material";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
 import ProjectsPage from "./pages/ProjectsPage";
+import Resume from "./pages/Resume";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
@@ -37,8 +39,10 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/Portfolio-RP" element={<HomePage />} />
-          <Route path="/Portfolio-RP/projects" element={<ProjectsPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<NotFound />} />
+          {/* <Route path="/projects" element={<ProjectsPage />} /> */}
         </Routes>
 
         <Footer />

@@ -1,5 +1,6 @@
 import { DarkMode, LightMode } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import ProfileIMG from "../assets/hero-img-2.jpg";
 
 const Header = ({ setDark, currentMode }) => {
   const changeMode = () => {
@@ -10,9 +11,9 @@ const Header = ({ setDark, currentMode }) => {
     <header className="flex lg:flex-row items-center lg:justify-evenly justify-center flex-col space-y-4 lg:space-y-0 py-4 px-5 border-b border-gray-200 dark:border-gray-700 lg:sticky lg:top-0 backdrop-blur-lg lg:z-50">
       <div className="flex flex-row items-center space-x-6">
         <img
-          src="https://blob.sololearn.com/avatars/fd84fff3-8135-4734-8d94-ec8361704898.jpg"
+          src={ProfileIMG}
           alt="profile"
-          className="lg:w-10 w-7 rounded-full"
+          className="lg:w-10 lg:h-10 w-7 h-7 object-cover rounded-full object-top"
         />
         <p className="font-bold font-poppins sm:text-xl text-lg dark:text-white">
           Ronak Paul
@@ -20,7 +21,7 @@ const Header = ({ setDark, currentMode }) => {
       </div>
 
       <div className="text-xs sm:text-base space-x-4 font-poppins font-medium dark:text-white items-center">
-        <Link to="/Portfolio-RP" className=" hover:border-b border-blue-700">
+        <Link to="/" className=" hover:border-b border-blue-700">
           Home
         </Link>
         <a href="#projects" className=" hover:border-b border-blue-700">
