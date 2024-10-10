@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "devh": "vite --host",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
