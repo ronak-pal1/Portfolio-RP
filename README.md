@@ -2,7 +2,7 @@
 <br><br>
 
 <p align="center">
-<img src="src/assets/hero-img-2.jpg" alt="My image" width="400px" height="400px" style="border-radius:100px;"/>
+<img src="src/assets/hero-img-2.jpg" alt="My image" width="400px" height="400px" style="object-fit:cover;"/>
 </p>
 
 <br><br>
