@@ -1,3 +1,6 @@
+import BlogSection from "../components/BlogSection";
+import EventSection from "../components/EventSection";
+import ExperianceSection from "../components/ExperianceSection";
 import HeroSection from "../components/HeroSection";
 import ProjectSection from "../components/ProjectSection";
 import SkillSection from "../components/SkillSection";
@@ -11,13 +14,18 @@ const HomePage = () => {
 
       <TransportationRow />
 
+      <ExperianceSection />
+
       <ProjectSection />
 
       <SkillSection />
 
       {/* <WhatCanIDo /> */}
+      <BlogSection />
 
       <YoutubeSection />
+
+      <EventSection />
     </>
   );
 };
