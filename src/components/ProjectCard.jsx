@@ -21,13 +21,13 @@ const ProjectCard = ({ imgUrl, title, desp, sourceLink, techStacks }) => {
         />
       </div>
 
-      <div className="pb-10 pl-3">
+      <div className="pb-10 px-3">
         {/* title */}
-        <p className="lg:text-2xl text-lg py-3 font-poppins font-semibold dark:text-gray-100">
+        <p className="lg:text-2xl text-lg py-3 font-semibold dark:text-gray-100">
           {title}
         </p>
         {/* desp */}
-        <p className="lg:text-sm text-xs line-clamp-3 font-poppins font-thin dark:text-gray-100">
+        <p className="lg:text-sm text-xs line-clamp-3 font-light dark:text-gray-100">
           {desp}
         </p>
 
@@ -40,8 +40,8 @@ const ProjectCard = ({ imgUrl, title, desp, sourceLink, techStacks }) => {
 
         <div className="flex flex-row items-center justify-evenly lg:mt-4 mt-2">
           <a href={sourceLink} target="_blank">
-            <div className="py-1 px-3 bg-sky-600 text-white rounded-md lg:text-sm text-xs">
-              Source Code
+            <div className=" bg-blue-500 text-gray-100 py-2 px-7 rounded-full text-xs">
+              View
             </div>
           </a>
         </div>
