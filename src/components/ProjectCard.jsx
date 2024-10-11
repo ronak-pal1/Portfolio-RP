@@ -3,15 +3,27 @@ import GetRequiredLogo from "./Logos";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const ProjectCard = ({ imgUrl, title, desp, sourceLink, techStacks }) => {
+const ProjectCard = ({
+  imgUrl,
+  title,
+  desp,
+  sourceLink,
+  techStacks,
+  status,
+}) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
   return (
     <div
-      className="lg:w-96 w-72 rounded-md border dark:bg-black border-gray-200 dark:border-gray-700 shadow-2xl shadow-gray-300 dark:shadow-sm dark:shadow-black flex-shrink-0 m-5 hover:scale-110 transition-transform z-10"
+      className="lg:w-96 w-72 relative rounded-md border dark:bg-black border-gray-200 dark:border-gray-700 shadow-2xl shadow-gray-300 dark:shadow-sm dark:shadow-black flex-shrink-0 m-5 hover:scale-110 transition-transform z-10"
       data-aos="zoom-in"
     >
+      <div className="absolute top-3 right-3">
+        <p className="bg-blue-700 text-white rounded-full text-xs px-3 py-1">
+          {status}
+        </p>
+      </div>
       <div className=" w-full ">
         <img
           src={imgUrl}

@@ -4,6 +4,7 @@ import {
   Devices,
 } from "@mui/icons-material";
 import ProjectCard from "./ProjectCard";
+import diagramgenCover from "../assets/projectCovers/diagramgen.jpg";
 import gmailCover from "../assets/projectCovers/gmail.jpg";
 import linkedCover from "../assets/projectCovers/linkedin.jpg";
 import slackCover from "../assets/projectCovers/slack.jpg";
@@ -60,11 +61,20 @@ const ProjectSection = () => {
           ref={projectContainer}
         >
           <ProjectCard
+            imgUrl={diagramgenCover}
+            title="Whiteboard and AI based Diagram Generator"
+            desp="This is a AI based whiteboard tool like excalidraw but with much more features. You can make digrams with different shapes and also collaborate with others."
+            sourceLink="https://github.com/ronak-pal1/diagramgen"
+            techStacks={["reactjs", "tailwindcss", "aws"]}
+            status={"Ongoing"}
+          />
+          <ProjectCard
             imgUrl={expenseTrackerAppCover}
             title="Expense Tracker App"
             desp="This is a expense tracker app for students and working professional to keep track of their expenses. It uses labels and prizes to keep track expenses."
             sourceLink="https://github.com/ronak-pal1/Expense-Tracker-App"
             techStacks={["reactjs", "firebase", "tailwindcss"]}
+            status={"Completed"}
           />
           <ProjectCard
             imgUrl={codeCasingCover}
@@ -72,6 +82,7 @@ const ProjectSection = () => {
             desp="CodeCasing is a code to image generator app. You just have to give the code and your will get an customizable image in return."
             sourceLink="https://ronak-pal1.github.io/CodeCasing/"
             techStacks={["html5", "css3", "javascript"]}
+            status={"Completed"}
           />
           <ProjectCard
             imgUrl={rpgsCover}
@@ -79,6 +90,7 @@ const ProjectSection = () => {
             desp="It is fully encrypted password manager for Command Line where you can save multiple passwords with a label and retrieve them whenever you want."
             sourceLink="https://www.npmjs.com/package/rpgs"
             techStacks={["javascript", "nodejs"]}
+            status={"Completed"}
           />
           <ProjectCard
             imgUrl={gmailCover}
@@ -93,7 +105,8 @@ const ProjectSection = () => {
             desp="LinkedIn Clone is a replica of the real LinkedIn. Here you can make posts and you can also see others posts."
             sourceLink="https://github.com/ronak-pal1/LinkedIn-Clone"
             techStacks={["reactjs", "redux", "css3", "firebase", "materialui"]}
-          />{" "}
+            status={"Completed"}
+          />
           <ProjectCard
             imgUrl={slackCover}
             title="Slack Clone"
@@ -106,7 +119,8 @@ const ProjectSection = () => {
               "firebase",
               "materialui",
             ]}
-          />{" "}
+            status={"Completed"}
+          />
         </div>
       </div>
 
