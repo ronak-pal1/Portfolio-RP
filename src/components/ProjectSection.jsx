@@ -7,7 +7,7 @@ import ProjectCard from "./ProjectCard";
 import gmailCover from "../assets/projectCovers/gmail.jpg";
 import linkedCover from "../assets/projectCovers/linkedin.jpg";
 import slackCover from "../assets/projectCovers/slack.jpg";
-import netflixCover from "../assets/projectCovers/netflix.jpg";
+import rpgsCover from "../assets/projectCovers/rpgs.jpg";
 import expenseTrackerAppCover from "../assets/projectCovers/owlspender.jpg";
 import codeCasingCover from "../assets/projectCovers/CodeCasing.jpg";
 import { useRef } from "react";
@@ -21,8 +21,7 @@ const ProjectSection = () => {
   let scrollPos = 0;
 
   const moveRight = () => {
-    if (scrollPos + 800 >= windowWIDTH) return;
-
+    if (windowWIDTH - scrollPos + 800 < 0) return;
     scrollPos += 800;
     projectContainer.current.scrollTo({ left: scrollPos, behavior: "smooth" });
   };
@@ -75,6 +74,13 @@ const ProjectSection = () => {
             techStacks={["html5", "css3", "javascript"]}
           />
           <ProjectCard
+            imgUrl={rpgsCover}
+            title="CLI based password Manager"
+            desp="It is fully encrypted password manager for Command Line where you can save multiple passwords with a label and retrieve them whenever you want."
+            sourceLink="https://www.npmjs.com/package/rpgs"
+            techStacks={["javascript", "nodejs"]}
+          />
+          <ProjectCard
             imgUrl={gmailCover}
             title="Gmail Clone"
             desp="Gmail Clone is a replica of the real Gmail. Here you can send emails to others and also receive emails from others."
@@ -101,19 +107,6 @@ const ProjectSection = () => {
               "materialui",
             ]}
           />{" "}
-          <ProjectCard
-            imgUrl={netflixCover}
-            title="Netflix Clone"
-            desp="Netflix clone is a replica of the real Netflix. Here you can login via gmail and pass, see the latest movies fetched from TMDB and stripe integration"
-            sourceLink="https://github.com/ronak-pal1/Netflix-Web-Clone"
-            techStacks={[
-              "reactjs",
-              "redux",
-              "stripe",
-              "firebase",
-              "materialui",
-            ]}
-          />
         </div>
       </div>
 
