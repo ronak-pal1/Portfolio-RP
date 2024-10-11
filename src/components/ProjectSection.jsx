@@ -126,7 +126,7 @@ const ProjectSection = () => {
 
       <div className="flex flex-row justify-center">
         <a
-          href="https://github.com/ronak-pal1/All-Projects"
+          href="https://github.com/ronak-pal1?tab=repositories"
           target="_blank"
           className="bg-blue-500 font-poppins font-bold py-2 px-3 text-white rounded-md"
         >
