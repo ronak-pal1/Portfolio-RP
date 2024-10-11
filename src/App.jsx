@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import ProjectsPage from "./pages/ProjectsPage";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className={`${isdarkMode && "dark"}`}>
+      <Analytics />
       <div className="bg-white dark:bg-zinc-900 relative">
         <Header setDark={setIsDarkMode} currentMode={isdarkMode} />
 
