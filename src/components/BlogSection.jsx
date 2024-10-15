@@ -55,14 +55,14 @@ const BlogSection = () => {
         <div className="w-full px-3 md:px-0  md:w-11/12  h-[700px] grid grid-cols-3 grid-rows-2 sm:grid-rows-3 gap-y-4 sm:gap-2 md:gap-3">
           <Link
             to={blogs[0]?.node.url}
-            className="bg-slate-100 col-span-3 row-span-1 sm:col-span-2  sm:row-span-2 rounded-md overflow-hidden cursor-pointer"
+            className=" bg-slate-100 dark:bg-black col-span-3 row-span-1 sm:col-span-2  sm:row-span-2 rounded-md overflow-hidden cursor-pointer"
           >
             <img
               src={blogs[0]?.node.coverImage.url}
               alt="Blog Banner"
               className="h-1/2 lg:h-2/3 w-full object-cover object-left-top rounded-t-md"
             />
-            <div className="p-3">
+            <div className="p-3 dark:text-white">
               <p className="text-xs sm:text-base">
                 {blogs[0]?.node.views} Views
               </p>
@@ -76,14 +76,14 @@ const BlogSection = () => {
           </Link>
           <Link
             to={blogs[1]?.node.url}
-            className="bg-slate-100  col-span-3 row-span-1 sm:col-span-1  rounded-md overflow-hidden"
+            className="bg-slate-100  dark:bg-black col-span-3 row-span-1 sm:col-span-1  rounded-md overflow-hidden"
           >
             <img
               src={blogs[1]?.node.coverImage.url}
               alt="Blog Banner"
               className="h-1/2 lg:h-2/3 w-full object-cover object-left-top rounded-t-md "
             />
-            <div className="p-3">
+            <div className="p-3 dark:text-white">
               <p className="text-xs">{blogs[1]?.node.views} Views</p>
               <h1 className="font-medium">{blogs[1]?.node.title}</h1>
               <p className="mt-2 font-light block text-xs sm:hidden sm:text-base">
@@ -93,14 +93,14 @@ const BlogSection = () => {
           </Link>
           <Link
             to={blogs[2]?.node.url}
-            className="bg-slate-100 col-span-1 row-span-2 rounded-md overflow-hidden hidden sm:block"
+            className="bg-slate-100 dark:bg-black col-span-1 row-span-2 rounded-md overflow-hidden hidden sm:block"
           >
             <img
               src={blogs[2]?.node.coverImage.url}
               alt="Blog Banner"
               className="h-1/2 w-full object-cover object-left-top rounded-t-md"
             />
-            <div className="p-3">
+            <div className="p-3 dark:text-white">
               <p className="text-xs">{blogs[2]?.node.views} Views</p>
               <h1 className="text-xl font-medium">{blogs[2]?.node.title}</h1>
               <p className="mt-2 font-light">{blogs[2]?.node.brief}</p>
@@ -109,14 +109,14 @@ const BlogSection = () => {
 
           <Link
             to={blogs[3]?.node.url}
-            className="bg-slate-100 col-span-2 row-span-1 rounded-md sm:flex hidden flex-1 overflow-y-hidden"
+            className="bg-slate-100 dark:bg-black col-span-2 row-span-1 rounded-md sm:flex hidden flex-1 overflow-y-hidden"
           >
             <img
               src={blogs[3]?.node.coverImage.url}
               alt="Blog Banner"
               className="h-full flex-[0.1] w-full object-cover object-left-top rounded-l-md"
             />
-            <div className="p-3 flex-[0.9]">
+            <div className="p-3 flex-[0.9] dark:text-white">
               <p className="text-xs">{blogs[3]?.node.views} Views</p>
               <h1 className="text-xl font-medium">{blogs[3]?.node.title}</h1>
               <p className="mt-2 font-light">{blogs[3]?.node.brief}</p>
