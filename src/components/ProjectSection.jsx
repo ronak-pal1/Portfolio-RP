@@ -98,6 +98,7 @@ const ProjectSection = () => {
             desp="Gmail Clone is a replica of the real Gmail. Here you can send emails to others and also receive emails from others."
             sourceLink="https://github.com/ronak-pal1/Email-Clone"
             techStacks={["reactjs", "redux", "css3", "firebase", "materialui"]}
+            status={"Completed"}
           />
           <ProjectCard
             imgUrl={linkedCover}
