@@ -125,7 +125,7 @@ const ProjectSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-center">
+      {/* <div className="flex flex-row justify-center">
         <a
           href="https://github.com/ronak-pal1?tab=repositories"
           target="_blank"
@@ -133,7 +133,7 @@ const ProjectSection = () => {
         >
           All Projects
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
