@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const ExperianceCard = ({
   role,
+  roleType,
   companyName,
   location,
   duration,
@@ -25,7 +26,12 @@ const ExperianceCard = ({
     >
       {/* Card header */}
       <div className="flex justify-between items-center ">
-        <h1 className="lg:text-2xl text-lg font-semibold">{role}</h1>
+        <h1 className="lg:text-2xl md:text-lg text-sm font-semibold">
+          {role}
+          <span className="md:text-sm text-xs font-light ml-2">
+            ({roleType})
+          </span>
+        </h1>
         <Link
           to={visitLink}
           className="font-poppins bg-blue-500 text-gray-100 py-1 px-4 rounded-full sm:text-sm text-xs"
@@ -79,7 +85,20 @@ const ExperianceSection = () => {
 
       <div className="flex flex-col justify-center items-center mt-4">
         <ExperianceCard
-          role={"SDE Intern"}
+          role={"Full Stack Developer"}
+          roleType={"Intern"}
+          companyName={"Creative Upaay"}
+          location={"remote"}
+          duration={"4/11/2024 - Present"}
+          tStack={["reactjs", "mongodb", "typescript", "tailwindcss", "redux"]}
+          works={
+            " My responsibility is to work on the given projects and work closely with the team to fullfill the client requirements."
+          }
+          visitLink={"https://www.creativeupaay.com/"}
+        />
+        <ExperianceCard
+          role={"Software Development Engineer"}
+          roleType={"Intern"}
           companyName={"applyin.co"}
           location={"remote"}
           duration={"01/04/2024 - 31/5/2024"}
