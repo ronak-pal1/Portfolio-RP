@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import BlogSection from "../components/BlogSection";
 import EventSection from "../components/EventSection";
 import ExperianceSection from "../components/ExperianceSection";
@@ -10,6 +11,14 @@ import YoutubeSection from "../components/YoutubeSection";
 const HomePage = () => {
   return (
     <>
+      <Helmet>
+        <title>Ronak Paul</title>
+        <meta
+          name="description"
+          content="The portfolio of ronak paul. Where I showed my all relevent skills, experiances, blogs, videos and all the other stuffs of me as a developer"
+        />
+      </Helmet>
+
       <HeroSection />
 
       <TransportationRow />
