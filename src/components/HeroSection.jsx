@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./styles/BlinkEffect.css";
 import TypingEffect from "./TypingEffect";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -87,25 +87,41 @@ const HeroSection = () => {
 
         {/* social media links */}
         <div className="lg:pt-5 pt-7 [&>*]:m-3 flex flex-wrap items-center">
-          <a href="https://github.com/ronak-pal1" target="_blank">
+          <a
+            href="https://github.com/ronak-pal1"
+            target="_blank"
+            title="Github"
+          >
             <GitHub fontSize="large" className="bg-white rounded-full" />
           </a>
-          <a href="https://www.linkedin.com/in/ronak-pal1/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/ronak-pal1/"
+            target="_blank"
+            title="Linkedin"
+          >
             <LinkedIn fontSize="large" className="text-blue-600" />
           </a>
-          <a href="https://twitter.com/ronak_pal1" target="_blank">
+          <a
+            href="https://twitter.com/ronak_pal1"
+            target="_blank"
+            title="Twitter or X"
+          >
             <Twitter fontSize="large" className="text-lime-400" />
           </a>
-          <a href="https://instagram.com/ronak_pal1" target="_blank">
+          <a
+            href="https://instagram.com/ronak_pal1"
+            target="_blank"
+            title="Instagram"
+          >
             <Instagram fontSize="large" className="text-pink-600" />
           </a>
 
-          <button
-            onClick={() => navigate("/resume")}
+          <Link
+            to={"/resume"}
             className="font-poppins bg-blue-800 text-gray-100 py-2 px-3 font-semibold rounded-md sm:text-sm text-xs"
           >
             View Resume
-          </button>
+          </Link>
         </div>
       </div>
 

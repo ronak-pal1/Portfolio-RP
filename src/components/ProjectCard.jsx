@@ -51,7 +51,7 @@ const ProjectCard = ({
         </div>
 
         <div className="flex flex-row items-center justify-evenly lg:mt-4 mt-2">
-          <a href={sourceLink} target="_blank">
+          <a href={sourceLink} target="_blank" title={title}>
             <div className=" bg-blue-500 text-gray-100 py-2 px-7 rounded-full text-xs">
               View
             </div>

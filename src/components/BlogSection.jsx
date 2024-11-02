@@ -1,6 +1,5 @@
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import { useEffect, useState } from "react";
-import TestBanner from "../assets/google-cloud-group-photo.jpg";
 import { Link } from "react-router-dom";
 
 const BlogSection = () => {
@@ -55,6 +54,7 @@ const BlogSection = () => {
         <div className="w-full px-3 md:px-0  md:w-11/12  h-[700px] grid grid-cols-3 grid-rows-2 sm:grid-rows-3 gap-y-4 sm:gap-2 md:gap-3">
           <Link
             to={blogs[0]?.node.url}
+            title={blogs[0]?.node.title}
             className=" bg-slate-100 dark:bg-black col-span-3 row-span-1 sm:col-span-2  sm:row-span-2 rounded-md overflow-hidden cursor-pointer"
           >
             <img
@@ -76,6 +76,7 @@ const BlogSection = () => {
           </Link>
           <Link
             to={blogs[1]?.node.url}
+            title={blogs[1]?.node.title}
             className="bg-slate-100  dark:bg-black col-span-3 row-span-1 sm:col-span-1  rounded-md overflow-hidden"
           >
             <img
@@ -93,6 +94,7 @@ const BlogSection = () => {
           </Link>
           <Link
             to={blogs[2]?.node.url}
+            title={blogs[2]?.node.title}
             className="bg-slate-100 dark:bg-black col-span-1 row-span-2 rounded-md overflow-hidden hidden sm:block"
           >
             <img
@@ -109,6 +111,7 @@ const BlogSection = () => {
 
           <Link
             to={blogs[3]?.node.url}
+            title={blogs[3]?.node.title}
             className="bg-slate-100 dark:bg-black col-span-2 row-span-1 rounded-md sm:flex hidden flex-1 overflow-y-hidden"
           >
             <img
@@ -126,6 +129,7 @@ const BlogSection = () => {
 
         <Link
           to={"https://codago.hashnode.dev/"}
+          title="Hashnode blogs"
           className="font-light bg-blue-700 text-gray-100 py-2 px-7 rounded-full text-sm mt-7 hover:scale-105"
         >
           Read all
