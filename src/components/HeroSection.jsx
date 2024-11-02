@@ -1,5 +1,4 @@
 import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
-import heroImage from "../assets/hero-img.png";
 import heroImage2 from "../assets/hero-img-2.jpg";
 import { useEffect, useRef } from "react";
 import AOS from "aos";
