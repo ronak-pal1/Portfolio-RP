@@ -76,7 +76,7 @@ const BlogSection = () => {
             </div>
           </Link>
           <Link
-            to={blogs[1]?.node.url}
+            to={`/blog/${blogs[1]?.node.slug}`}
             title={blogs[1]?.node.title}
             className="bg-slate-100  dark:bg-black col-span-3 row-span-1 sm:col-span-1  rounded-md overflow-hidden"
           >
@@ -94,7 +94,7 @@ const BlogSection = () => {
             </div>
           </Link>
           <Link
-            to={blogs[2]?.node.url}
+            to={"/blog/${blogs[2]?.node.slug}"}
             title={blogs[2]?.node.title}
             className="bg-slate-100 dark:bg-black col-span-1 row-span-2 rounded-md overflow-hidden hidden sm:block"
           >
@@ -111,7 +111,7 @@ const BlogSection = () => {
           </Link>
 
           <Link
-            to={blogs[3]?.node.url}
+            to={`/blog/${blogs[3]?.node.slug}`}
             title={blogs[3]?.node.title}
             className="bg-slate-100 dark:bg-black col-span-2 row-span-1 rounded-md sm:flex hidden flex-1 overflow-y-hidden"
           >

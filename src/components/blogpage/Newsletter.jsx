@@ -47,11 +47,11 @@ const Newsletter = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
-        className="bg-slate-100 dark:bg-slate-800 py-4 px-4 font-poppins outline-none  rounded-l-md w-full placeholder:select-none dark:text-white"
+        className="bg-slate-100 dark:bg-slate-800 py-4 px-4 font-poppins outline-none  rounded-l-md w-full placeholder:select-none dark:text-white text-xs md:text-base"
       />
       <button
         onClick={subscribe}
-        className="bg-blue-600 py-4 px-4 text-white font-poppins rounded-r-md"
+        className="bg-blue-600 py-4 px-4 text-white font-poppins rounded-r-md text-xs md:text-base"
       >
         Subscribe
       </button>
