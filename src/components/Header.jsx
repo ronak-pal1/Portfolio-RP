@@ -30,11 +30,7 @@ const Header = ({ setDark, currentMode }) => {
         <a href="#skills" className=" hover:border-b border-blue-700">
           Skills
         </a>
-        <a
-          href="https://codago.hashnode.dev/"
-          target="_blank"
-          className=" hover:border-b border-blue-700"
-        >
+        <a href="/blog" className=" hover:border-b border-blue-700">
           Blogs
         </a>
 

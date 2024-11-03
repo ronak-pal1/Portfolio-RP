@@ -13,6 +13,7 @@ const BlogSection = () => {
                     title
                     brief
     								views
+                    slug
                   	coverImage{
                       url
                     }
@@ -36,7 +37,7 @@ const BlogSection = () => {
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data.data.publication.posts.edges);
-        console.log(data.data.publication.posts.edges);
+        // console.log(data.data.publication.posts.edges);
       })
       .catch((error) => console.error("Error fetching blogs:", error));
   }, []);
@@ -53,7 +54,7 @@ const BlogSection = () => {
       <div className="w-full flex flex-col items-center justify-center">
         <div className="w-full px-3 md:px-0  md:w-11/12  h-[700px] grid grid-cols-3 grid-rows-2 sm:grid-rows-3 gap-y-4 sm:gap-2 md:gap-3">
           <Link
-            to={blogs[0]?.node.url}
+            to={`/blog/${blogs[0]?.node.slug}`}
             title={blogs[0]?.node.title}
             className=" bg-slate-100 dark:bg-black col-span-3 row-span-1 sm:col-span-2  sm:row-span-2 rounded-md overflow-hidden cursor-pointer"
           >
@@ -128,9 +129,9 @@ const BlogSection = () => {
         </div>
 
         <Link
-          to={"https://codago.hashnode.dev/"}
-          title="Hashnode blogs"
-          className="font-light bg-blue-700 text-gray-100 py-2 px-7 rounded-full text-sm mt-7 hover:scale-105"
+          to={"/blog"}
+          title="My all blogs"
+          className="font-light bg-blue-600 text-gray-100 py-2 px-7 rounded-full text-sm mt-7 hover:scale-105"
         >
           Read all
         </Link>

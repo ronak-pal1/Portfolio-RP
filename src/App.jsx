@@ -9,6 +9,7 @@ import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 import { Analytics } from "@vercel/analytics/react";
 import BlogsPage from "./pages/BlogsPage";
+import SingleBlogPage from "./pages/SingleBlogPage";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
@@ -46,6 +47,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/blog" element={<BlogsPage />} />
+          <Route path="/blog/:slug" element={<SingleBlogPage />} />
           {/* <Route path="/projects" element={<ProjectsPage />} /> */}
         </Routes>
 
