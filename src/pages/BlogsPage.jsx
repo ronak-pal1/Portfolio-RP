@@ -124,7 +124,7 @@ const BlogsPage = () => {
 
         {/* Newsletter subscribe section */}
         <div className="w-full flex justify-center">
-          <div className="w-1/2 mt-40 flex flex-col items-center space-y-7">
+          <div className="w-3/4 md:w-1/2 mt-40 flex flex-col items-center space-y-7">
             <p className="text-xl font-poppins dark:text-white text-center">
               Subscribe to my Newsletter
             </p>

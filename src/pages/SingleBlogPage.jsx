@@ -76,6 +76,7 @@ const SingleBlogPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchBlog();
 
     howMuchReadBarRef.current.style.width = "0%";

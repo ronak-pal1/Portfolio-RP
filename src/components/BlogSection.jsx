@@ -94,7 +94,7 @@ const BlogSection = () => {
             </div>
           </Link>
           <Link
-            to={"/blog/${blogs[2]?.node.slug}"}
+            to={`/blog/${blogs[2]?.node.slug}`}
             title={blogs[2]?.node.title}
             className="bg-slate-100 dark:bg-black col-span-1 row-span-2 rounded-md overflow-hidden hidden sm:block"
           >
