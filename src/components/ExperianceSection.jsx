@@ -21,7 +21,7 @@ const ExperianceCard = ({
 
   return (
     <div
-      className="w-5/6 md:w-3/4 lg:w-1/2 px-4 py-5 rounded-md border bg-white dark:bg-black dark:text-white border-gray-100 dark:border-gray-700 shadow-md shadow-gray-300 dark:shadow-sm dark:shadow-black m-5 hover:scale-105 transition-transform"
+      className="w-5/6 md:w-3/4 px-4 py-5 rounded-md border bg-white dark:bg-black dark:text-white border-gray-100 dark:border-gray-700 shadow-md shadow-gray-300 dark:shadow-sm dark:shadow-black m-5 hover:scale-105 transition-transform"
       data-aos="fade-up"
     >
       {/* Card header */}
@@ -58,7 +58,12 @@ const ExperianceCard = ({
         <p className="font-medium lg:text-sm text-xs">Tech Stacks: </p>
         <div className="flex items-center space-x-3 ml-3">
           {tStack.map((stack, id) => (
-            <GetRequiredLogo logoName={stack} size={20} key={id} />
+            <GetRequiredLogo
+              logoName={stack}
+              size={20}
+              key={id}
+              color={stack == "nextjs" && "#000"}
+            />
           ))}
         </div>
       </div>
@@ -85,14 +90,43 @@ const ExperianceSection = () => {
 
       <div className="flex flex-col justify-center items-center mt-4">
         <ExperianceCard
+          role={"Full Stack Engineer"}
+          roleType={"Intern"}
+          companyName={"Periskope"}
+          location={"remote"}
+          duration={"24/3/2025 - Present"}
+          tStack={[
+            "reactjs",
+            "nextjs",
+            "typescript",
+            "tailwindcss",
+            "redux",
+            "postgressql",
+            "gcp",
+            "docker",
+          ]}
+          works={
+            " Adding features to the periskope as per the requirement. Fixing bugs of the product as raised by the end users."
+          }
+          visitLink={"https://www.periskope.app/"}
+        />
+
+        <ExperianceCard
           role={"Full Stack Developer"}
           roleType={"Intern"}
           companyName={"Creative Upaay"}
           location={"remote"}
-          duration={"4/11/2024 - Present"}
-          tStack={["reactjs", "mongodb", "typescript", "tailwindcss", "redux"]}
+          duration={"4/11/2024 - 15/3/2025"}
+          tStack={[
+            "reactjs",
+            "mongodb",
+            "typescript",
+            "tailwindcss",
+            "redux",
+            "aws",
+          ]}
           works={
-            " My responsibility is to work on the given projects and work closely with the team to fullfill the client requirements."
+            " Built a entire VISA portal for a dubai based company (both frontend and backend). Built a company product like LinkedIn for events, where you can connect with different people in the events easily. Built app for a client."
           }
           visitLink={"https://www.creativeupaay.com/"}
         />
