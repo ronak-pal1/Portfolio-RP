@@ -56,11 +56,11 @@ const ExperianceCard = ({
       {/* all the tech stacks used in the company */}
       <div className="flex items-center mt-4">
         <p className="font-medium lg:text-sm text-xs">Tech Stacks: </p>
-        <div className="flex items-center space-x-3 ml-3">
+        <div className="flex items-center gap-2 ml-3 flex-wrap">
           {tStack.map((stack, id) => (
             <GetRequiredLogo
               logoName={stack}
-              size={20}
+              size={innerWidth < 600 ? 16 : 20}
               key={id}
               color={stack == "nextjs" && "#000"}
             />
