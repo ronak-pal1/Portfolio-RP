@@ -83,7 +83,7 @@ const ExperianceSection = () => {
     <div className="mt-28">
       <div className="flex flex-row items-center space-x-3 justify-center w-full">
         <p className="lg:text-3xl text-xl font-poppins font-semibold dark:text-white">
-          Experiances
+          Experiences
         </p>
         <Construction fontSize="large" className="dark:text-white" />
       </div>
