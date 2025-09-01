@@ -12,48 +12,50 @@ const Accordion = ({ title, projects }) => {
   };
 
   return (
-    <div className="space-y-2 py-4 border-b border-gray-200">
+    <div className="space-y-2 py-4 border-b border-gray-200 w-full">
       <div
-        className="w-full flex items-center cursor-pointer select-none"
+        className="w-full flex items-center cursor-pointer select-none px-4 sm:px-6"
         onClick={toggleAccordion}
       >
         <ArrowDropDownIcon
           fontSize="large"
           color="primary"
-          className={`transition-transform duration-200 ${
+          className={`transition-transform duration-200 flex-shrink-0 ${
             isOpen ? "" : "-rotate-90"
           }`}
         />
-        <h2 className="text-3xl font-medium text-blue-600 flex items-center">
-          <p>{title}</p>
-          <span className="text-xl ml-5 text-neutral-800 font-normal">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-blue-600 flex items-center flex-wrap gap-2">
+          <span>{title}</span>
+          <span className="text-base sm:text-lg md:text-xl text-neutral-800 font-normal">
             ({projects.length})
           </span>
         </h2>
       </div>
 
       <div
-        className={`pl-14 overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[1000px] py-5" : "max-h-0 py-0"
+        className={`overflow-hidden transition-all duration-300 ease-in-out px-4 sm:px-6 ${
+          isOpen ? "max-h-[2000px] py-4 sm:py-5" : "max-h-0 py-0"
         }`}
       >
-        <ul className="list-disc marker:text-blue-600 marker:text-xl space-y-12 py-2">
+        <ul className="list-disc marker:text-blue-600 marker:text-lg sm:marker:text-xl space-y-8 sm:space-y-10 py-2 pl-5 sm:pl-10">
           {projects.map((project, index) => (
-            <li className="font-light">
-              <div className="flex flex-col space-y-3">
-                <div className="flex flex-row items-center space-x-5 text-xl [&>a]:text-blue-500 [&>a]:text-sm">
-                  <p>{project.title}</p>
-                  <a href={project.link} className="hover:underline">
-                    View
-                  </a>
-                  <a href={project.source} className="hover:underline">
-                    Source code
-                  </a>
+            <li key={index} className="font-light">
+              <div className="flex flex-col space-y-2 sm:space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-lg sm:text-xl [&>a]:text-blue-500 [&>a]:text-sm">
+                  <p className="break-words">{project.title}</p>
+                  <div className="flex gap-4">
+                    <a href={project.link} className="hover:underline whitespace-nowrap">
+                      View
+                    </a>
+                    <a href={project.source} className="hover:underline whitespace-nowrap">
+                      Source code
+                    </a>
+                  </div>
                 </div>
 
                 <div>
-                  <p className="text-sm">
-                    <span className="font-semibold mr-2">Tech Stack:</span>{" "}
+                  <p className="text-xs sm:text-sm">
+                    <span className="font-semibold mr-1 sm:mr-2">Tech Stack:</span>
                     {project.stack.join(", ")}
                   </p>
                 </div>
@@ -186,56 +188,66 @@ const projectsData = [
 
 const ProjectsPage = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <img
         src={banner}
         alt="projects page banner"
-        className="w-full h-[200px] lg:h-[400px] object-cover object-center"
+        className="w-full h-[150px] sm:h-[200px] md:h-[300px] lg:h-[400px] object-cover object-center"
       />
 
-      <div className="flex justify-center items-center">
-        <div className="w-full -mt-14 max-w-5xl">
-          <p className="text-8xl">🛠️</p>
+      <div className="flex justify-center items-start px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-6xl -mt-10 sm:-mt-14 md:-mt-20">
+          <p className="text-6xl sm:text-7xl md:text-8xl">🛠️</p>
 
-          <div className="mt-12">
-            <div className="w-full border-b-2 border-gray-600 dark:border-gray-700 pb-5 space-y-5">
-              <div className="flex items-center justify-between">
-                <h1 className="text-5xl font-bold flex items-center">
-                  <span>Projects</span>{" "}
-                  <span className="text-xl ml-5 font-normal">(100)</span>
-                </h1>
+          <div className="mt-8 sm:mt-12">
+            <div className="w-full border-b-2 border-gray-200 dark:border-gray-700 pb-4 sm:pb-5 space-y-3 sm:space-y-5">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-center">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+                    Projects
+                  </h1>
+                  <span className="text-base sm:text-lg md:text-xl ml-3 sm:ml-5 font-normal text-gray-600 dark:text-gray-400">
+                    (100+)
+                  </span>
+                </div>
 
-                <div className="lg:pt-5 pt-7 [&>*]:m-3 flex flex-wrap items-center">
+                <div className="flex items-center justify-end sm:justify-start space-x-2 sm:space-x-3 [&>a]:transition-transform [&>a]:hover:scale-110">
                   <a
                     href="https://github.com/ronak-pal1"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                     title="Github"
                   >
-                    <GitHub fontSize="medium" className="bg-white rounded-full" />
+                    <GitHub className="text-xl sm:text-2xl" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/ronak-pal1/"
                     target="_blank"
-                    title="Linkedin"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+                    title="LinkedIn"
                   >
-                    <LinkedIn fontSize="medium" className="text-blue-600" />
+                    <LinkedIn className="text-xl sm:text-2xl text-blue-600" />
                   </a>
                   <a
                     href="https://twitter.com/ronak_pal1"
                     target="_blank"
-                    title="Twitter or X"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+                    title="Twitter"
                   >
-                    <Twitter fontSize="medium" className="text-blue-400" />
+                    <Twitter className="text-xl sm:text-2xl text-blue-400" />
                   </a>
                 </div>
               </div>
 
-              <p className="text-lg font-extralight">
+              <p className="text-base sm:text-lg font-light text-gray-600 dark:text-gray-300">
                 Love building projects. Breaking and building things ✌️
               </p>
             </div>
 
-            <div className="my-20 space-y-9">
+            <div className="my-10 sm:my-16 md:my-20 space-y-6 sm:space-y-9">
               {projectsData.map((project, index) => (
                 <Accordion
                   key={index}
@@ -245,8 +257,10 @@ const ProjectsPage = () => {
               ))}
             </div>
 
-            <div className="w-full text-center">
-              <p className="text-xl font-extralight">More to come 🚀</p>
+            <div className="w-full text-center py-8 sm:py-12">
+              <p className="text-lg sm:text-xl font-light text-gray-600 dark:text-gray-400">
+                More to come 🚀
+              </p>
             </div>
           </div>
         </div>

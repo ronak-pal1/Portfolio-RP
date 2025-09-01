@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import { Analytics } from "@vercel/analytics/react";
 import BlogsPage from "./pages/BlogsPage";
 import SingleBlogPage from "./pages/SingleBlogPage";
+import LayoutWithHeader from "./LayoutWithHeader";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
@@ -31,8 +32,6 @@ function App() {
     <div className={`${isdarkMode && "dark"}`}>
       <Analytics />
       <div className="bg-white dark:bg-zinc-900 relative">
-        <Header setDark={setIsDarkMode} currentMode={isdarkMode} />
-
         <div
           className={`fixed right-6 bottom-3 bg-blue-600 z-50 rounded-full text-white p-1.5 md:p-2 cursor-pointer ${
             isGoTopVisible ? "block" : "hidden"
@@ -43,11 +42,16 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/blog" element={<BlogsPage />} />
-          <Route path="/blog/:slug" element={<SingleBlogPage />} />
+          {/* With header routes */}
+            <Route element={<LayoutWithHeader setDark={setIsDarkMode} currentMode={isdarkMode} />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/blog" element={<BlogsPage />} />
+            <Route path="/blog/:slug" element={<SingleBlogPage />} />
+          </Route>
+
+          {/* Without header routes */}
           <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
 
