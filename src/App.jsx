@@ -48,7 +48,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/blog" element={<BlogsPage />} />
           <Route path="/blog/:slug" element={<SingleBlogPage />} />
-          {/* <Route path="/projects" element={<ProjectsPage />} /> */}
+          <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
 
         <Footer />
