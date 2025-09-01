@@ -21,7 +21,7 @@ const Accordion = ({ title, projects }) => {
           fontSize="large"
           color="primary"
           className={`transition-transform duration-200 ${
-            isOpen ? "-rotate-90" : ""
+            isOpen ? "" : "-rotate-90"
           }`}
         />
         <h2 className="text-3xl font-medium text-blue-600 flex items-center">
