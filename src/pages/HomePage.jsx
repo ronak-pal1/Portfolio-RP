@@ -7,6 +7,7 @@ import ProjectSection from "../components/ProjectSection";
 import SkillSection from "../components/SkillSection";
 import TransportationRow from "../components/TransportationRow";
 import YoutubeSection from "../components/YoutubeSection";
+import SocialPostsSection from "../components/SocialPostsSection";
 
 const HomePage = () => {
   return (
@@ -28,6 +29,8 @@ const HomePage = () => {
       <ProjectSection />
 
       <SkillSection />
+
+      <SocialPostsSection />
 
       {/* <WhatCanIDo /> */}
       <BlogSection />
