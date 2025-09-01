@@ -90,11 +90,54 @@ const ExperianceSection = () => {
 
       <div className="flex flex-col justify-center items-center mt-4">
         <ExperianceCard
+          role={"AI Engineer"}
+          roleType={"Intern"}
+          companyName={"Creative Upaay"}
+          location={"remote"}
+          duration={"5/8/2025 - Present"}
+          tStack={[
+            "reactjs",
+            "nextjs",
+            "typescript",
+            "tailwindcss",
+            "redux",
+            "aws",
+            "docker",
+            "python",
+          ]}
+          works={
+            "Building full dashboard for a Polymer company and building AI models for getting insights from the data."
+          }
+          visitLink={"https://www.creativeupaay.com/"}
+        />
+
+        <ExperianceCard
+          role={"Full Stack Engineer"}
+          roleType={"Part Time"}
+          companyName={"Hashdome"}
+          location={"remote"}
+          duration={"2/8/2025 - Present"}
+          tStack={[
+            "reactjs",
+            "nextjs",
+            "typescript",
+            "tailwindcss",
+            "redux",
+            "aws",
+            "docker",
+          ]}
+          works={
+            "Building a service based company. Experimenting with new ideas and technologies."
+          }
+          visitLink={"https://www.hashdome.com/"}
+        />
+
+        <ExperianceCard
           role={"Full Stack Engineer"}
           roleType={"Intern"}
           companyName={"Periskope"}
           location={"remote"}
-          duration={"24/3/2025 - Present"}
+          duration={"24/3/2025 - 31/5/2025"}
           tStack={[
             "reactjs",
             "nextjs",
@@ -106,7 +149,7 @@ const ExperianceSection = () => {
             "docker",
           ]}
           works={
-            " Adding features to the periskope as per the requirement. Fixing bugs of the product as raised by the end users."
+            "Built the entire TS package library for their API’s including realtime event client funtions using socket.io. Also written cron tests for this. Implemented AI polish and user credits usage features in that platform. Implemented Notification Service Worker for the site so that push notifcations can happen when the site is closed. Implemented filters for chats and also developed their internal features. Wrote and polished their technical documentations."
           }
           visitLink={"https://www.periskope.app/"}
         />

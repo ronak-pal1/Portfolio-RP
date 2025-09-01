@@ -11,7 +11,7 @@ const Header = ({ setDark, currentMode }) => {
 
   return (
     <header className="flex lg:flex-row items-center lg:justify-evenly justify-center flex-col space-y-4 lg:space-y-0 py-4 px-5 border-b border-gray-200 dark:border-gray-700 lg:sticky lg:top-0 backdrop-blur-lg lg:z-50">
-      <div className="flex flex-row items-center space-x-6" onClick={() => {navigate("/")}}>
+      <div className="flex flex-row items-center space-x-6 cursor-pointer" onClick={() => {navigate("/")}}>
         <img
           src={ProfileIMG}
           alt="profile"
