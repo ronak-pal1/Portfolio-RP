@@ -110,6 +110,27 @@ const GetRequiredLogo = ({ logoName, size, color }) => {
         ></path>
       </svg>
     );
+  } else if (logoName === "github") {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width={size}
+        viewBox="0 0 48 48"
+      >
+        <path
+          fill="#000000"
+          d="M24 4c-11 0-20 9-20 20 0 8.9 5.8 16.5 13.8 19.2 1 .2 1.4-.4 1.4-.9v-3.3
+    c-5.6 1.2-6.8-2.4-6.8-2.4-.9-2.2-2.2-2.8-2.2-2.8-1.8-1.2.1-1.2.1-1.2
+    2 .1 3 2 3 2 1.8 3 4.7 2.1 5.8 1.6.2-1.3.7-2.1 1.2-2.6
+    -4.5-.5-9.2-2.3-9.2-10.1 0-2.2.8-4 2-5.4-.2-.5-.9-2.6.2-5.3 0 0
+    1.7-.5 5.5 2a19.2 19.2 0 0 1 10 0c3.8-2.5 5.5-2 5.5-2 1.1 2.7.4 4.8.2 5.3
+    1.2 1.4 2 3.2 2 5.4 0 7.9-4.7 9.6-9.3 10.1.7.6 1.3 1.8 1.3 3.7v5.5c0 .5.4 1.1
+    1.4.9A20 20 0 0 0 44 24c0-11-9-20-20-20z"
+        />
+      </svg>
+    );
   } else if (logoName === "html5") {
     return (
       <svg viewBox="0 0 128 128" width={`${size}px`}>
@@ -3951,6 +3972,52 @@ const GetRequiredLogo = ({ logoName, size, color }) => {
             fill="url(#SVGID_00000140728474547789280440000018204366184369975479__sH0rW2TvYdr9_gr2)"
             d="M24,18.4v23.7c0,1.8,2.4,2.6,3.5,1.2 l16.4-20.7c1.3-1.7,0.1-4.1-2.1-4.1H24z"
           ></path>
+        </g>
+      </svg>
+    );
+  } else if (logoName == "redis") {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width={size}
+        viewBox="0 0 48 48"
+      >
+        <defs>
+          <linearGradient
+            id="redisGradient"
+            x1="0"
+            x2="0"
+            y1="0"
+            y2="1"
+            gradientUnits="objectBoundingBox"
+          >
+            <stop offset="0" stop-color="#ff6b6b"></stop>
+            <stop offset="1" stop-color="#c53030"></stop>
+          </linearGradient>
+        </defs>
+        <g>
+          {/* Base block */}
+          <path
+            fill="url(#redisGradient)"
+            d="M24 4L6 10v4l18 6 18-6v-4L24 4z"
+          />
+          {/* Middle block */}
+          <path
+            fill="url(#redisGradient)"
+            d="M24 14L6 20v4l18 6 18-6v-4L24 14z"
+          />
+          {/* Top block */}
+          <path
+            fill="url(#redisGradient)"
+            d="M24 24L6 30v4l18 6 18-6v-4L24 24z"
+          />
+          {/* Star symbol */}
+          <polygon
+            fill="white"
+            points="24,11 25.8,14.6 29.8,15.1 27,17.9 27.6,21.9 24,20 20.4,21.9 21,17.9 18.2,15.1 22.2,14.6"
+          />
         </g>
       </svg>
     );

@@ -2,11 +2,22 @@ import GetRequiredLogo from "./Logos";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 const SkillBox = ({ title, skills }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const skillToast = (label) => {
+
+    if(label)
+    toast(label, {
+      position:"top-center",
+      duration:1500
+    })
+  }
+
   return (
     <div className="w-full font-poppins rounded-md flex flex-row items-center justify-evenly my-6 py-2">
       <div className="text-black lg:text-3xl md:text-xl text-base font-thin dark:text-white">
@@ -17,7 +28,7 @@ const SkillBox = ({ title, skills }) => {
         data-aos="flip-left"
       >
         {skills.map((item, index) => (
-          <div className="relative" key={index}>
+          <div className="relative" key={index} onClick={() => {skillToast(item.label)}}>
             <div className="absolute lg:p-3 p-1 bg-gray-200 rounded-full opacity-0 hover:opacity-80">
               <p className="lg:text-sm text-xs font-bold font-poppins">
                 {item.level}

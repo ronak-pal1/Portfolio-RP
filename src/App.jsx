@@ -11,6 +11,7 @@ import { Analytics } from "@vercel/analytics/react";
 import BlogsPage from "./pages/BlogsPage";
 import SingleBlogPage from "./pages/SingleBlogPage";
 import LayoutWithHeader from "./LayoutWithHeader";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className={`${isdarkMode && "dark"}`}>
+      <Toaster />
       <Analytics />
       <div className="bg-white dark:bg-zinc-900 relative">
         <div
