@@ -62,3 +62,21 @@ body::-webkit-scrollbar-thumb {
     background-color: #f9f9f9;
   }
 } */
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 2px rgba(77, 139, 238, 0.6);  /* soft blue */
+  }
+  50% {
+    box-shadow: 0 0 15px 6px rgba(90, 146, 236, 0.9); /* intense glow */
+  }
+  100% {
+    box-shadow: 0 0 5px 2px rgba(62, 115, 202, 0.6);  /* back to soft */
+  }
+}
+
+.glow-animate {
+  animation: glow 2s infinite ease-in-out;
+}
+

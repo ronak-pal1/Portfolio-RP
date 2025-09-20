@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet";
 import BlogSection from "../components/BlogSection";
 import EventSection from "../components/EventSection";
-import ExperianceSection from "../components/ExperianceSection";
 import HeroSection from "../components/HeroSection";
 import ProjectSection from "../components/ProjectSection";
 import SkillSection from "../components/SkillSection";
 import TransportationRow from "../components/TransportationRow";
 import YoutubeSection from "../components/YoutubeSection";
 import SocialPostsSection from "../components/SocialPostsSection";
+import ExperienceNew from "../components/ExperienceNew";
 
 const HomePage = () => {
   return (
@@ -24,7 +24,9 @@ const HomePage = () => {
 
       <TransportationRow />
 
-      <ExperianceSection />
+      {/* <ExperianceSection /> */}
+
+      <ExperienceNew />
 
       <ProjectSection />
 
