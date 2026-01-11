@@ -24,8 +24,6 @@ const HomePage = () => {
 
       <TransportationRow />
 
-      {/* <ExperianceSection /> */}
-
       <ExperienceNew />
 
       <ProjectSection />
