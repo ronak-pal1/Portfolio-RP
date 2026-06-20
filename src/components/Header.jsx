@@ -37,7 +37,7 @@ const Header = ({ setDark, currentMode }) => {
         </a>
 
         <a
-          href="https://www.youtube.com/@CodaGo"
+          href="https://www.youtube.com/@ronak_pal1"
           target="_blank"
           className=" hover:border-b border-blue-700"
         >

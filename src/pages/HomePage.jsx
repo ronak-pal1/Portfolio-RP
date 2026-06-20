@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import BlogSection from "../components/BlogSection";
+// import BlogSection from "../components/BlogSection";
 import EventSection from "../components/EventSection";
 import HeroSection from "../components/HeroSection";
 import ProjectSection from "../components/ProjectSection";
@@ -33,7 +33,7 @@ const HomePage = () => {
       <SocialPostsSection />
 
       {/* <WhatCanIDo /> */}
-      <BlogSection />
+      {/* <BlogSection /> */}
 
       <YoutubeSection />
 

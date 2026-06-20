@@ -49,8 +49,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="/blog" element={<BlogsPage />} />
-            <Route path="/blog/:slug" element={<SingleBlogPage />} />
+            {/* <Route path="/blog" element={<BlogsPage />} /> */}
+            {/* <Route path="/blog/:slug" element={<SingleBlogPage />} /> */}
           </Route>
 
           {/* Without header routes */}
