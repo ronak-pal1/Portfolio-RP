@@ -1,6 +1,13 @@
+// @ts-nocheck
 import { ClassNames } from "@emotion/react";
 
-const GetRequiredLogo = ({ logoName, size, color }) => {
+type GetRequiredLogoProps = {
+  logoName: string;
+  size: number;
+  color?: string;
+};
+
+const GetRequiredLogo = ({ logoName, size, color }: GetRequiredLogoProps) => {
   if (logoName === "tailwindcss") {
     return (
       <svg viewBox="0 0 128 128" width={`${size}px`}>
@@ -3921,8 +3928,8 @@ const GetRequiredLogo = ({ logoName, size, color }) => {
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"
-          strokeLineCap="round"
-          strokeLineJoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           <path
@@ -3950,8 +3957,8 @@ const GetRequiredLogo = ({ logoName, size, color }) => {
             y2="36.033"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#7dffce"></stop>
-            <stop offset="1" stop-color="#50c08d"></stop>
+            <stop offset="0" stopColor="#7dffce"></stop>
+            <stop offset="1" stopColor="#50c08d"></stop>
           </linearGradient>
           <path
             fill="url(#SVGID_1__sH0rW2TvYdr9_gr1)"
@@ -3965,8 +3972,8 @@ const GetRequiredLogo = ({ logoName, size, color }) => {
             y2="19.425"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#7dffce"></stop>
-            <stop offset="1" stop-color="#50c08d"></stop>
+            <stop offset="0" stopColor="#7dffce"></stop>
+            <stop offset="1" stopColor="#50c08d"></stop>
           </linearGradient>
           <path
             fill="url(#SVGID_00000140728474547789280440000018204366184369975479__sH0rW2TvYdr9_gr2)"
@@ -3993,8 +4000,8 @@ const GetRequiredLogo = ({ logoName, size, color }) => {
             y2="1"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#ff6b6b"></stop>
-            <stop offset="1" stop-color="#c53030"></stop>
+            <stop offset="0" stopColor="#ff6b6b"></stop>
+            <stop offset="1" stopColor="#c53030"></stop>
           </linearGradient>
         </defs>
         <g>

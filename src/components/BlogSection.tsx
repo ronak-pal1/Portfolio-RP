@@ -1,4 +1,4 @@
-import KeyboardIcon from "@mui/icons-material/Keyboard";
+import { MdKeyboard } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -48,7 +48,7 @@ const BlogSection = () => {
         <p className="lg:text-3xl text-xl font-poppins font-semibold text-black dark:text-white">
           Blogs
         </p>
-        <KeyboardIcon fontSize="large" className="dark:text-white" />
+        <MdKeyboard className="text-[2rem] dark:text-white" />
       </div>
 
       <div className="w-full flex flex-col items-center justify-center">

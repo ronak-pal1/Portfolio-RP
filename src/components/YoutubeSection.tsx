@@ -1,4 +1,4 @@
-import { YouTube } from "@mui/icons-material";
+import { FaYoutube } from "react-icons/fa";
 
 const YoutubeSection = () => {
   return (
@@ -7,7 +7,7 @@ const YoutubeSection = () => {
         <p className="lg:text-3xl text-xl font-poppins font-semibold text-black dark:text-white">
           Videos
         </p>
-        <YouTube fontSize="large" className="dark:text-white" />
+        <FaYoutube className="text-[2rem] dark:text-white" />
       </div>
       {/* 2 */}
 

@@ -1,4 +1,4 @@
-import { Construction } from "@mui/icons-material";
+import { MdConstruction } from "react-icons/md";
 import GetRequiredLogo from "./Logos";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -85,7 +85,7 @@ const ExperianceSection = () => {
         <p className="lg:text-3xl text-xl font-poppins font-semibold dark:text-white">
           Experiences
         </p>
-        <Construction fontSize="large" className="dark:text-white" />
+        <MdConstruction className="text-[2rem] dark:text-white" />
       </div>
 
       <div className="flex flex-col justify-center items-center mt-4">

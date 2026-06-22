@@ -1,17 +1,27 @@
-import { DarkMode, LightMode } from "@mui/icons-material";
+import { IoMoon, IoSunny } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import ProfileIMG from "../assets/hero-img-2.jpg";
 
-const Header = ({ setDark, currentMode }) => {
+type HeaderProps = {
+  setDark: (value: boolean) => void;
+  currentMode: boolean;
+};
+
+const Header = ({ setDark, currentMode }: HeaderProps) => {
   const changeMode = () => {
     setDark(!currentMode);
   };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <header className="flex lg:flex-row items-center lg:justify-evenly justify-center flex-col space-y-4 lg:space-y-0 py-4 px-5 border-b border-gray-200 dark:border-gray-700 lg:sticky lg:top-0 backdrop-blur-lg lg:z-50">
-      <div className="flex flex-row items-center space-x-6 cursor-pointer" onClick={() => {navigate("/")}}>
+      <div
+        className="flex flex-row items-center space-x-6 cursor-pointer"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
         <img
           src={ProfileIMG}
           alt="profile"
@@ -39,6 +49,7 @@ const Header = ({ setDark, currentMode }) => {
         <a
           href="https://www.youtube.com/@ronak_pal1"
           target="_blank"
+          rel="noreferrer"
           className=" hover:border-b border-blue-700"
         >
           Youtube
@@ -51,15 +62,16 @@ const Header = ({ setDark, currentMode }) => {
           className="border border-gray-400 dark:border-white bg-gray-100 dark:bg-black p-1 rounded-full"
         >
           {currentMode ? (
-            <LightMode className="text-white" />
+            <IoSunny className="text-white" />
           ) : (
-            <DarkMode className="text-zinc-900" />
+            <IoMoon className="text-zinc-900" />
           )}
         </div>
 
         <a
           href="https://mail.google.com/mail/u/0/?fs=1&to=ronakpaul882@gmail.com&tf=cm"
           target="_blank"
+          rel="noreferrer"
           className="font-poppins bg-blue-600 text-gray-100 py-2 px-3 font-semibold rounded-full sm:text-sm text-xs"
         >
           Connect

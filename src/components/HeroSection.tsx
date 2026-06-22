@@ -1,4 +1,4 @@
-import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import heroImage2 from "../assets/hero-img-2.jpg";
 import { useEffect, useRef } from "react";
 import AOS from "aos";
@@ -68,12 +68,12 @@ const HeroSection = () => {
       <div className="md:w-1/3 w-3/4" data-aos="slide-right">
         {/* big text */}
         <div className=" bg-blue-300 p-5 rounded-md">
-          <p className="lg:text-5xl text-2xl font-bold font-poppins leading-tight">
+          <div className="lg:text-5xl text-2xl font-bold font-poppins leading-tight">
             Hey <span className="lg:text-4xl">👋</span>,<br /> I'm a{" "}
             <TypingEffect />
             <div className="h-8 w-1 bg-yellow-300 inline-block mx-3 blinkit"></div>
             , Technical Writer
-          </p>
+          </div>
         </div>
 
         {/* small text */}
@@ -90,29 +90,33 @@ const HeroSection = () => {
             href="https://github.com/ronak-pal1"
             target="_blank"
             title="Github"
+            rel="noreferrer"
           >
-            <GitHub fontSize="large" className="bg-white rounded-full" />
+            <FaGithub className="text-3xl bg-white rounded-full" />
           </a>
           <a
             href="https://www.linkedin.com/in/ronak-pal1/"
             target="_blank"
             title="Linkedin"
+            rel="noreferrer"
           >
-            <LinkedIn fontSize="large" className="text-blue-600" />
+            <FaLinkedin className="text-3xl text-blue-600" />
           </a>
           <a
             href="https://twitter.com/ronak_pal1"
             target="_blank"
             title="Twitter or X"
+            rel="noreferrer"
           >
-            <Twitter fontSize="large" className="text-lime-400" />
+            <FaTwitter className="text-3xl text-lime-400" />
           </a>
           <a
             href="https://instagram.com/ronak_pal1"
             target="_blank"
             title="Instagram"
+            rel="noreferrer"
           >
-            <Instagram fontSize="large" className="text-pink-600" />
+            <FaInstagram className="text-3xl text-pink-600" />
           </a>
 
           <Link

@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --spacing-130: 35rem;
+  --breakpoint-vsm: 450px;
+}
 
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */

@@ -10,6 +10,13 @@ const ProjectCard = ({
   sourceLink,
   techStacks,
   status,
+}: {
+  imgUrl: string;
+  title: string;
+  desp: string;
+  sourceLink: string;
+  techStacks: string[];
+  status: string;
 }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });

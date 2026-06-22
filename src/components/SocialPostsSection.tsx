@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Star } from "@mui/icons-material";
+import { FaStar } from "react-icons/fa";
 
 const TweetEmbed = ({ tweetId }) => {
   useEffect(() => {
@@ -45,7 +45,7 @@ const SocialPostsSection = () => {
         <p className="lg:text-3xl text-xl font-poppins font-semibold dark:text-white">
           Featured
         </p>
-        <Star fontSize="large" className="dark:text-white" />
+        <FaStar className="text-[2rem] dark:text-white" />
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 my-8 px-4 w-full">

@@ -1,4 +1,4 @@
-import { SportsBar } from "@mui/icons-material";
+import { FaBeer } from "react-icons/fa";
 import GCD_EVENT_IMG from "../assets/google-cloud-group-photo.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,7 +21,7 @@ const EventSection = () => {
           <h1 className="lg:text-3xl text-xl font-light dark:text-white">
             Happy Coding
           </h1>
-          <SportsBar fontSize="large" className="dark:text-white ml-3" />
+          <FaBeer className="text-[2rem] dark:text-white ml-3" />
         </div>
       </div>
     </div>

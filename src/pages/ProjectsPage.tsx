@@ -1,6 +1,5 @@
-import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
+import { FaGithub, FaLinkedin, FaTwitter, FaChevronDown } from "react-icons/fa";
 import banner from "../assets/projects-page-banner.png";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 import { useState } from "react";
 
@@ -17,10 +16,8 @@ const Accordion = ({ title, projects }) => {
         className="w-full flex items-center cursor-pointer select-none px-4 sm:px-6"
         onClick={toggleAccordion}
       >
-        <ArrowDropDownIcon
-          fontSize="large"
-          color="primary"
-          className={`transition-transform duration-200 flex-shrink-0 ${
+        <FaChevronDown
+          className={`text-2xl text-blue-600 transition-transform duration-200 flex-shrink-0 ${
             isOpen ? "" : "-rotate-90"
           }`}
         />
@@ -219,7 +216,7 @@ const ProjectsPage = () => {
                     className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                     title="Github"
                   >
-                    <GitHub className="text-xl sm:text-2xl" />
+                    <FaGithub className="text-xl sm:text-2xl" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/ronak-pal1/"
@@ -228,7 +225,7 @@ const ProjectsPage = () => {
                     className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                     title="LinkedIn"
                   >
-                    <LinkedIn className="text-xl sm:text-2xl text-blue-600" />
+                    <FaLinkedin className="text-xl sm:text-2xl text-blue-600" />
                   </a>
                   <a
                     href="https://twitter.com/ronak_pal1"
@@ -237,7 +234,7 @@ const ProjectsPage = () => {
                     className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                     title="Twitter"
                   >
-                    <Twitter className="text-xl sm:text-2xl text-blue-400" />
+                    <FaTwitter className="text-xl sm:text-2xl text-blue-400" />
                   </a>
                 </div>
               </div>

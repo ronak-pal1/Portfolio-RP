@@ -1,10 +1,10 @@
 import {
-  AutoStoriesOutlined,
-  Instagram,
-  LinkedIn,
-  PublicOutlined,
-  Twitter,
-} from "@mui/icons-material";
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaGlobe,
+  FaBookOpen,
+} from "react-icons/fa";
 import { useRef } from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -122,7 +122,7 @@ const SingleBlogPage = () => {
           </p>
 
           <div className="flex items-center space-x-3 text-slate-700 dark:text-slate-400">
-            <AutoStoriesOutlined />
+            <FaBookOpen />
             <p>8 mins to read</p>
           </div>
         </div>
@@ -134,7 +134,7 @@ const SingleBlogPage = () => {
             {/* share section */}
             <div className="w-full flex flex-col items-center">
               <div className="flex items-center space-x-3 text-sm bg-blue-600 text-white px-4 py-1 rounded-3xl">
-                <PublicOutlined />
+                <FaGlobe />
                 <p>Share on Socials</p>
               </div>
 
@@ -144,10 +144,7 @@ const SingleBlogPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkedIn
-                    fontSize="large"
-                    className="text-black dark:text-white"
-                  />
+                  <FaLinkedin className="text-3xl text-black dark:text-white" />
                 </Link>
 
                 <Link
@@ -155,10 +152,7 @@ const SingleBlogPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Twitter
-                    fontSize="large"
-                    className="text-black dark:text-white"
-                  />
+                  <FaTwitter className="text-3xl text-black dark:text-white" />
                 </Link>
 
                 <Link
@@ -166,10 +160,7 @@ const SingleBlogPage = () => {
                   target={"_blank"}
                   rel="noopener noreferrer"
                 >
-                  <Instagram
-                    fontSize="large"
-                    className="text-black dark:text-white"
-                  />
+                  <FaInstagram className="text-3xl text-black dark:text-white" />
                 </Link>
               </div>
             </div>

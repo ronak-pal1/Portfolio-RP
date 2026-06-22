@@ -1,8 +1,8 @@
 import {
-  ArrowLeftRounded,
-  ArrowRightRounded,
-  Devices,
-} from "@mui/icons-material";
+  FaLaptopCode,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
 import diagramgenCover from "../assets/projectCovers/diagramgen.jpg";
 import gmailCover from "../assets/projectCovers/gmail.jpg";
@@ -40,7 +40,7 @@ const ProjectSection = () => {
         <p className="lg:text-3xl text-xl font-poppins font-semibold dark:text-white">
           Projects
         </p>
-        <Devices fontSize="large" className="dark:text-white" />
+        <FaLaptopCode className="text-[2rem] dark:text-white" />
       </div>
 
       <div className="relative">
@@ -48,13 +48,13 @@ const ProjectSection = () => {
           className="absolute left-4 top-1/2 z-20 rounded-full bg-black text-white dark:bg-white dark:text-black hidden md:block cursor-pointer"
           onClick={moveLeft}
         >
-          <ArrowLeftRounded fontSize="large" />
+          <FaChevronLeft className="text-xl" />
         </div>
         <div
           className="absolute right-4 top-1/2 z-20 rounded-full bg-black text-white dark:bg-white dark:text-black hidden md:block cursor-pointer"
           onClick={moveRight}
         >
-          <ArrowRightRounded fontSize="large" />
+          <FaChevronRight className="text-xl" />
         </div>
         <div
           className="px-5 py-7 flex overflow-x-scroll no-scrollbar"

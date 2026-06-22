@@ -1,7 +1,6 @@
-import { useState } from "react";
-import Header from "./components/Header";
+import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
-import { ArrowUpward } from "@mui/icons-material";
+import { FaArrowUp } from "react-icons/fa";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -17,20 +16,25 @@ function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
   const [isGoTopVisible, setIsGoTopVisible] = useState(false);
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 700) {
-      setIsGoTopVisible(true);
-    } else {
-      setIsGoTopVisible(false);
-    }
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsGoTopVisible(window.scrollY > 700);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const goTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className={`${isdarkMode && "dark"}`}>
+    <div className={isdarkMode ? "dark" : ""}>
       <Toaster />
       <Analytics />
       <div className="bg-white dark:bg-zinc-900 relative">
@@ -40,12 +44,14 @@ function App() {
           }`}
           onClick={goTop}
         >
-          <ArrowUpward />
+          <FaArrowUp />
         </div>
 
         <Routes>
           {/* With header routes */}
-            <Route element={<LayoutWithHeader setDark={setIsDarkMode} currentMode={isdarkMode} />}>
+          <Route
+            element={<LayoutWithHeader setDark={setIsDarkMode} currentMode={isdarkMode} />}
+          >
             <Route path="/" element={<HomePage />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="*" element={<NotFound />} />

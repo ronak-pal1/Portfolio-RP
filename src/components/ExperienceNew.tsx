@@ -1,8 +1,6 @@
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { MdApartment, MdConstruction } from "react-icons/md";
 import GetRequiredLogo from "./Logos";
-import { Construction } from "@mui/icons-material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -120,7 +118,7 @@ const ExperienceNew = () => {
         <p className="lg:text-3xl text-xl font-poppins font-semibold dark:text-white">
           Experiences
         </p>
-        <Construction fontSize="large" className="dark:text-white" />
+        <MdConstruction className="text-[2rem] dark:text-white" />
       </div>
       <div className="relative max-w-4xl mx-auto mt-20">
         {/* Timeline Line */}
@@ -172,17 +170,17 @@ const ExperienceNew = () => {
                 {/* Details */}
                 <div className="flex flex-row flex-wrap items-center gap-3 my-5 text-xs md:text-sm text-slate-700 dark:text-slate-300">
                   <div className="flex items-center space-x-2">
-                    <ApartmentIcon fontSize="small" />
+                    <MdApartment className="text-sm" />
                     <span className="font-medium">{exp.company}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CalendarMonthIcon fontSize="small" />
+                    <FaCalendarAlt className="text-xs" />
                     <span>
                       {exp.startDate} - {exp.endDate || "Present"}
                     </span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <LocationOnIcon fontSize="small" />
+                    <FaMapMarkerAlt className="text-xs" />
                     <span>{exp.location}</span>
                   </div>
                 </div>

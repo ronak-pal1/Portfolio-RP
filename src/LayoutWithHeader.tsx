@@ -1,7 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 
-const LayoutWithHeader = ({setDark, currentMode}) => {
+type LayoutWithHeaderProps = {
+  setDark: (value: boolean) => void;
+  currentMode: boolean;
+};
+
+const LayoutWithHeader = ({ setDark, currentMode }: LayoutWithHeaderProps) => {
 
   return (
     <>

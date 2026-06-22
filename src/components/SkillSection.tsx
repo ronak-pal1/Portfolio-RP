@@ -1,4 +1,4 @@
-import { ElectricBolt } from "@mui/icons-material";
+import { FaBolt } from "react-icons/fa";
 import SkillBox from "./SkillBox";
 
 const SkillSection = () => {
@@ -8,7 +8,7 @@ const SkillSection = () => {
         <p className="lg:text-3xl text-xl font-poppins font-semibold text-black dark:text-white">
           Skills
         </p>
-        <ElectricBolt fontSize="large" className="dark:text-white" />
+        <FaBolt className="text-[2rem] dark:text-white" />
       </div>
 
       <div className="flex flex-row justify-center mt-5">
