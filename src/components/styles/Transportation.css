@@ -1,6 +1,6 @@
 @keyframes slideAnimation {
   from {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(-100%);
@@ -9,6 +9,6 @@
 
 .container-transport {
   animation: slideAnimation linear infinite;
-  animation-duration: 20s;
+  animation-duration: 80s;
   animation-direction: normal;
 }

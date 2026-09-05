@@ -1,6 +1,7 @@
 import { IoMoon, IoSunny } from "react-icons/io5";
-import { Link, useNavigate } from "react-router-dom";
-import ProfileIMG from "../assets/hero-img-2.jpg";
+import {  useNavigate } from "react-router-dom";
+import CustomButton from "./CustomButton";
+import { GoCommandPalette } from "react-icons/go";
 
 type HeaderProps = {
   setDark: (value: boolean) => void;
@@ -15,68 +16,35 @@ const Header = ({ setDark, currentMode }: HeaderProps) => {
   const navigate = useNavigate();
 
   return (
-    <header className="flex lg:flex-row items-center lg:justify-evenly justify-center flex-col space-y-4 lg:space-y-0 py-4 px-5 border-b border-gray-200 dark:border-gray-700 lg:sticky lg:top-0 backdrop-blur-lg lg:z-50">
-      <div
-        className="flex flex-row items-center space-x-6 cursor-pointer"
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        <img
-          src={ProfileIMG}
-          alt="profile"
-          className="lg:w-10 lg:h-10 w-7 h-7 object-cover rounded-full object-top"
-        />
-        <p className="font-bold font-poppins sm:text-xl text-lg dark:text-white">
-          Ronak Paul
-        </p>
-      </div>
+    <header className="w-full flex flex-col justify-center items-center h-15 pt-3">
+      <div className="w-[90%] border-x border-x-[#121212]/70 border-dashed h-full px-4 flex items-center justify-between">
 
-      <div className="text-xs sm:text-base space-x-4 font-poppins font-medium dark:text-white items-center">
-        <Link to="/" className=" hover:border-b border-blue-700">
-          Home
-        </Link>
-        <a href="#projects" className=" hover:border-b border-blue-700">
-          Projects
-        </a>
-        <a href="#skills" className=" hover:border-b border-blue-700">
-          Skills
-        </a>
-        <a href="/blog" className=" hover:border-b border-blue-700">
-          Blogs
-        </a>
+        <p className="font-mono font-normal">Ronak Paul</p>
 
-        <a
-          href="https://www.youtube.com/@ronak_pal1"
-          target="_blank"
-          rel="noreferrer"
-          className=" hover:border-b border-blue-700"
-        >
-          Youtube
-        </a>
-      </div>
 
-      <div className="flex items-center space-x-4">
-        <div
-          onClick={changeMode}
-          className="border border-gray-400 dark:border-white bg-gray-100 dark:bg-black p-1 rounded-full"
-        >
-          {currentMode ? (
-            <IoSunny className="text-white" />
-          ) : (
-            <IoMoon className="text-zinc-900" />
-          )}
+        <div className="flex items-center space-x-8 font-mono text-xs text-[#121212]/70">
+          <p>Skills</p>
+          <p>Experience</p>
+          <p>Projects</p>
+          <p>Blogs</p>
+          <p>Feedbacks</p>
         </div>
 
-        <a
-          href="https://mail.google.com/mail/u/0/?fs=1&to=ronakpaul882@gmail.com&tf=cm"
-          target="_blank"
-          rel="noreferrer"
-          className="font-poppins bg-blue-600 text-gray-100 py-2 px-3 font-semibold rounded-full sm:text-sm text-xs"
-        >
-          Connect
-        </a>
+
+        <div className="flex items-center space-x-3">
+          <div className="w-10 h-10 bg-secondary border border-black/20 flex items-center justify-center text-[#121212]/80">
+          <GoCommandPalette />
+          </div>
+          <CustomButton text="Connect now" color="blue" width="150px"/>
+           <div className="w-10 h-10 bg-secondary border border-black/20 flex items-center justify-center text-[#121212]/80">
+           <IoMoon />
+          </div>
+        </div>
+
+      
       </div>
+
+      <div className="w-[90%] mt-2 border-b border-b-[#121212] border-dashed"></div>
     </header>
   );
 };

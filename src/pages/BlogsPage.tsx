@@ -2,10 +2,6 @@ import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import { useState } from "react";
 import binaryNumberHeroImage from "../assets/binaryNumbers.jpg";
-import LatestBlogs from "../components/blogpage/LatestBlogs";
-import MoreBlogs from "../components/blogpage/MoreBlogs";
-import SearchBlog from "../components/blogpage/SearchBlog";
-import Newsletter from "../components/blogpage/Newsletter";
 
 const BlogsPage = () => {
   const [latestBlogs, setLatestBlogs] = useState([]);
@@ -105,14 +101,7 @@ const BlogsPage = () => {
           </div>
         </div>
 
-        {/* Search bar for blogs */}
-        <SearchBlog />
-
-        {/* Latest blog section */}
-        <LatestBlogs latestBlogs={latestBlogs} />
-
-        {/* More blogs section */}
-        <MoreBlogs blogs={moreBlogs} />
+       
         <div className="w-full flex justify-center mt-10">
           <button
             onClick={loadMoreBlogs}
@@ -128,7 +117,6 @@ const BlogsPage = () => {
             <p className="text-xl font-poppins dark:text-white text-center">
               Subscribe to my Newsletter
             </p>
-            <Newsletter />
           </div>
         </div>
       </div>

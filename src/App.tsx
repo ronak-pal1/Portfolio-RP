@@ -37,15 +37,15 @@ function App() {
     <div className={isdarkMode ? "dark" : ""}>
       <Toaster />
       <Analytics />
-      <div className="bg-white dark:bg-zinc-900 relative">
-        <div
+      <div className=" rough-paper-bg relative">
+        {/* <div
           className={`fixed right-6 bottom-3 bg-blue-600 z-50 rounded-full text-white p-1.5 md:p-2 cursor-pointer ${
             isGoTopVisible ? "block" : "hidden"
           }`}
           onClick={goTop}
         >
           <FaArrowUp />
-        </div>
+        </div> */}
 
         <Routes>
           {/* With header routes */}
@@ -61,9 +61,10 @@ function App() {
 
           {/* Without header routes */}
           <Route path="/projects" element={<ProjectsPage />} />
+
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
